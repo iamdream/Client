@@ -26,13 +26,13 @@ class AppData {
             var leagueExecutable = leaguePath + "League of Legends.exe";
 
             var fs = require('fs');
-            if (fs.existsSync(leagueExecutable)) {
-                this.executablePath = leagueExecutable;
-                this.executableDirectory = leaguePath;
-                return true;
-            }
+            this.executablePath = leagueExecutable;
+            this.isGarena = false;
+            this.executableDirectory = leaguePath;
+            return true;
         }
-        if (isMac) {
+        
+        if(isMac) {
             var leaguePath = this.leaguePath;
             if (leaguePath.substr(leaguePath.length - 1) != "\\") {
                 leaguePath = leaguePath + "\\";
@@ -41,8 +41,8 @@ class AppData {
             leaguePath = leaguePath + "";
             leaguePath = leaguePath.replaceAll('\\', '/');
             var leagueExecutable = leaguePath + "Leagueoflegends";
-
-
+    
+    
             var fs = require('fs');
             if (fs.existsSync(leagueExecutable)) {
                 this.executablePath = leagueExecutable;
@@ -51,8 +51,7 @@ class AppData {
                 return true;
             }
         }
-        return false;
-    };
+    }
     createIfNotExist() {
         if (!fs.existsSync(this.leaguePath)) {
             fs.mkdirSync(this.leaguePath);

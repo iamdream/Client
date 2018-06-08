@@ -178,7 +178,7 @@ class AppLogic {
             });
         }
         if (isWindows) {
-            const game = spawn('cmd', ['/c', 'start', "", this.appData.getExecutablePath(), "8394", "LoLLauncher.exe", "", this.appData.host + " " + port + " 17BLOhi6KZsTtldTsizvHg== " + playerNum], { cwd: this.appData.getLeagueDirectory() });
+            const game = spawn('cmd', ['/c', 'start', "", this.appData.getExecutablePath(), "8394", "LoLLauncher.exe", "", ip + " " + port + " 17BLOhi6KZsTtldTsizvHg== " + playerNum], { cwd: this.appData.getLeagueDirectory() });
 
         }
     };
@@ -191,8 +191,8 @@ class AppLogic {
 
 function chooseLang() {
     console.log(navigator.language)
-    var availableLang = ['en', 'es', 'ro', 'de', 'tr', 'fr']
-    if (availableLang.indexOf(navigator.language)) {
-        selectedLang = navigator.language;
+    var availableLang = ['es', 'ro', 'en', 'de', 'tr', 'fr']
+    if (availableLang.indexOf(navigator.language) >= 0) {
+        selectedLang = availableLang[availableLang.indexOf(navigator.language)];
     }
 }
