@@ -208,7 +208,8 @@ var ChampionList = [
     "Graves",
     "MissFortune",
     "Lucian",
-    "Lulu"
+    "Lulu",
+    "Vayne"
 ]
 var ExtendedChampionsData = {
     "Aatrox": {
