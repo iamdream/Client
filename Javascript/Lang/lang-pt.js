@@ -4,7 +4,7 @@ module.exports = {
     nicknameInput: "Nome de usuário",
     passwordInput: "Senha",
     loginButton: "Iniciar sessão",
-    registerLink: "Ainda não poss uma conta? Cadastre-se aqui",
+    registerLink: "Ainda não possui uma conta? Cadastre-se aqui",
     errorLeaguePathLength: "Escreva o local onde você deseja que os arquivos LoM sejam salvos",
     errorNicknameTooLong: "Seu nome de usuário é muito longo",
     errorNoNickname: "Digite seu nome de usuário",
